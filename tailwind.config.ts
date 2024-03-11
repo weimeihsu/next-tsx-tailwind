@@ -7,6 +7,34 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    colors:{
+      'spray': {
+        '50': '#edfefe',
+        '100': '#d1fafc',
+        '200': '#a9f4f8',
+        '300': '#7becf4',
+        '400': '#2bd6e5',
+        'DEFAULT': '#0fb9cb',
+        '600': '#0f95ab',
+        '700': '#13778b',
+        '800': '#196071',
+        '900': '#195160',
+        '950': '#0b3541',
+    },    
+      'neutral': {
+        '50': '#f5f7f9',
+        '100': '#e9ecf0',
+        '200': '#d8dee5',
+        '300': '#c2ccd6',
+        '400': '#9dacbd',
+        'DEFAULT': '#8595ac',
+        '600': '#74819c',
+        '700': '#67728e',
+        '800': '#586075',
+        '900': '#49505f',
+        '950': '#2f323c',
+    },  
+    },
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
