@@ -1,5 +1,5 @@
 'use client'
-import Image from 'next/image'
+
 import { useState, useEffect } from "react"
 import { db } from "../firebase/config" 
 import { collection, getDocs } from "firebase/firestore"
@@ -28,7 +28,7 @@ const Gallery = () => {
         <div className="grid grid-cols-2 gap-2 md:grid-cols-4">
             {imgs.map(item=>(
                 <div className="p-4 rounded shadow-deeper" key={item.id} >
-                    <Image src={item.url} alt={item.title} className="rounded-sm mb-2"/>
+                    <img src={item.url} alt={item.title} className="rounded-sm mb-2"/>
                     <p className="text-sm font-light">{item.title}</p>
                 </div>
             ))}
