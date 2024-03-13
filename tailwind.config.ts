@@ -33,7 +33,22 @@ const config: Config = {
         '800': '#586075',
         '900': '#49505f',
         '950': '#2f323c',
-    },  
+    },
+    'supernova': {
+      '50': '#fefce8',
+      '100': '#fff9c2',
+      '200': '#fff087',
+      '300': '#ffe043',
+      '400': '#ffcc14',
+      'DEFAULT': '#efb203',
+      '600': '#ce8900',
+      '700': '#a46004',
+      '800': '#884b0b',
+      '900': '#733d10',
+      '950': '#431f05',
+  },
+  
+    
     },
     extend: {
       backgroundImage: {
@@ -41,6 +56,9 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      boxShadow: {
+        'deeper': '0 1px 3px 0 rgb(0 0 0 / 0.5), 0 1px 2px -1px rgb(0 0 0 / 0.5);',
+      }
     },
   },
   plugins: [],

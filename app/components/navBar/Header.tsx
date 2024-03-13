@@ -3,8 +3,8 @@ import NavItem from "./navItem/NavItem"
 
 const navitem =[
   { name: 'Home', path: '/'},
-  { name: 'Gallery', path: 'gallery'},
-  { name: 'Login', path: 'login' },
+  { name: 'Gallery', path: '/gallery'},
+  { name: 'Login', path: '/login' },
 ]
 
 const Header = () => {
