@@ -29,11 +29,6 @@ const Gallery = () => {
         <div className="grid grid-cols-2 gap-2 md:grid-cols-4">
             {imgs.map(item=>(
                 <div className="p-4 rounded shadow-deeper" key={item.id} >
-                    <img src={item.url} alt={item.title} className="rounded-sm mb-2"/>
-                    <p className="text-sm font-light">{item.title}</p>
-                </div>
-            ))}
-            {imgs.map(item=>(
                 <Image
                 alt={item.title}
                 src={item.url}
@@ -42,8 +37,9 @@ const Gallery = () => {
                 style={{
                   maxWidth: "100%",
                   height: "auto",
-                }}
-              />
+                }}/>
+                    <p className="text-sm font-light">{item.title}</p>
+                </div>
             ))}
         </div>
         </>
