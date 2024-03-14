@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import { db } from "../firebase/config" 
 import { collection, getDocs } from "firebase/firestore"
+import Image from "next/image"
 
 const fetchImg = async () =>{
     const querySnapshot = await getDocs(collection(db, 'img-the-crew'))
@@ -31,6 +32,18 @@ const Gallery = () => {
                     <img src={item.url} alt={item.title} className="rounded-sm mb-2"/>
                     <p className="text-sm font-light">{item.title}</p>
                 </div>
+            ))}
+            {imgs.map(item=>(
+                <Image
+                alt={item.title}
+                src={item.url}
+                width={1000}
+                height={1000}
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                }}
+              />
             ))}
         </div>
         </>
