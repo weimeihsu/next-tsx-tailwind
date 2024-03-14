@@ -46,10 +46,7 @@ const config: Config = {
       '800': '#884b0b',
       '900': '#733d10',
       '950': '#431f05',
-  },
-  
-    
-    },
+  },},
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -58,6 +55,9 @@ const config: Config = {
       },
       boxShadow: {
         'deeper': '0 1px 3px 0 rgb(0 0 0 / 0.5), 0 1px 2px -1px rgb(0 0 0 / 0.5);',
+      },
+      spacing:{
+        '13':'52px'
       }
     },
   },

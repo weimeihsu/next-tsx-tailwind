@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 
-const NavItem = ({ item }) => {
+const NavItem = ({ item, toggleMenu }) => {
   const pathName = usePathname()
 
   // const isActive = (href) => router.pathname === href
@@ -12,7 +12,7 @@ const NavItem = ({ item }) => {
   // }
 
   return (
-    <Link href={item.path} className={'rounded-md px-3 py-2 text-sm font-medium'+(pathName === item.path ? 'text-white bg-neutral-900' : 'text-neutral-300 hover:bg-neutral-700 hover:text-white')}>
+    <Link href={item.path} className={'rounded-md px-3 py-2 text-sm font-medium'+(pathName === item.path ? 'text-white bg-neutral-900' : 'text-neutral-300 hover:bg-neutral-700 hover:text-white')} onClick={toggleMenu}>
      {item.name} 
     </Link>
   );
