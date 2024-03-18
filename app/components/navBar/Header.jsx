@@ -1,8 +1,9 @@
 'use client'
-import NavItem from "./navItem/NavItem"
+import NavItem from "./NavItem"
 import { Menu }  from "lucide-react"
 import { X } from "lucide-react"
 import { useState } from "react"
+
 const navitem =[
   { name: 'Home', path: '/'},
   { name: 'Gallery', path: '/gallery'},
