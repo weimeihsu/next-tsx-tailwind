@@ -1,6 +1,6 @@
 'use client'
 import Lottie from "lottie-react"
-import anima from './src/lottie/cheers-anima.json'
+import anima from '../public/anima/lottie/cheers-anima.json'
 import { FerrisWheel } from 'lucide-react'
 
 const Home = () => {
