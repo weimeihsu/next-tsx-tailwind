@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "ES6",
     "lib": [
       "dom",
       "dom.iterable",
@@ -34,7 +34,6 @@
     "**/*.tsx",
     "**/**/*.tsx",
     ".next/types/**/*.ts",
-    "components/**/*.tsx"
   ],
   "exclude": [
     "node_modules"
