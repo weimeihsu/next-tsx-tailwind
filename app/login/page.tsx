@@ -1,4 +1,10 @@
+'use client'
+import { CustomButton } from "@/components";
+
 const Login = () => {
+  const handleScroll = () => {
+
+  }
     return ( 
         <div className="justify-center box-border w-72 m-auto mt-4">
         <h1 className="text-xl my-4">Log in Your Account</h1>
@@ -48,6 +54,11 @@ const Login = () => {
               >
                 Log in
             </button>
+            <CustomButton
+              title="Custom Button"
+              containerStyles="bg-supernova"
+              handleClick={handleScroll}
+            />
             </form>
         </div>
      );
