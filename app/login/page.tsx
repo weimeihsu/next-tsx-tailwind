@@ -1,19 +1,14 @@
-'use client'
-import { CustomButton } from "@/components";
-
 const Login = () => {
-  const handleScroll = () => {
-
-  }
+  
     return ( 
-        <div className="justify-center box-border w-72 m-auto mt-4">
+        <div className="justify-center w-72 m-auto mt-4">
         <h1 className="text-xl my-4">Log in Your Account</h1>
-            <form className="space-y-6" action="#" method="POST">
+            <form className="space-y-4" action="#" method="POST">
             <div>
             <label htmlFor="email" className="block text-sm font-medium leading-6 text-neutral">
                 Email address
             </label>
-            <div className="mt-2">
+            <div className="mt-1">
                 <input
                 id="email"
                 name="email"
@@ -36,7 +31,7 @@ const Login = () => {
                   </a>
                 </div>
               </div>
-              <div className="mt-2">
+              <div className="mt-1">
                 <input
                   id="password"
                   name="password"
@@ -54,11 +49,6 @@ const Login = () => {
               >
                 Log in
             </button>
-            <CustomButton
-              title="Custom Button"
-              containerStyles="bg-supernova"
-              handleClick={handleScroll}
-            />
             </form>
         </div>
      );

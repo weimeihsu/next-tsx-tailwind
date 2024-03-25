@@ -8,6 +8,7 @@ const navitem =[
   { name: 'Home', path: '/'},
   { name: 'Gallery', path: '/gallery'},
   { name: 'Login', path: '/login' },
+  { name: 'Style Sheet', path: '/stylesheet' },
 ]
 
 const Header = () => {
