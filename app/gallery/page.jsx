@@ -25,7 +25,7 @@ const Gallery = () => {
         fetchData()
     }, [])
     return ( <>
-        <h1>Images Fetched from Firebase</h1>
+        <div className="text-lg">Images Fetched from Firebase</div>
         <div className="grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-4">
             {imgs.map(item=>(
                 <div className="p-4 rounded shadow-deeper" key={item.id} >

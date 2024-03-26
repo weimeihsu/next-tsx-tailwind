@@ -4,7 +4,7 @@ const Login = () => {
   
     return ( 
         <div className="justify-center w-72 m-auto">
-        <h1 className="text-xl my-4 mt-4">Log in Your Account</h1>
+        <div className="text-lg">Log in Your Account</div>
             <form className="space-y-4" action="#" method="POST">
             <div>
             <label htmlFor="email" className="block text-sm font-medium leading-6 text-neutral">
