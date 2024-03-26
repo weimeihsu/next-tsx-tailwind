@@ -1,4 +1,3 @@
-
 import { cva, VariantProps } from 'class-variance-authority'
 import { CustomButtonProps } from '@/types/index'
 import { ComponentProps } from 'react'
