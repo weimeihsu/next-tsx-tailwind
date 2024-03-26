@@ -22,17 +22,17 @@ const Header = () => {
           <div className="flex flex-row">
             <button className="z-50 relative mr-2 md:hidden" onClick={toggleMenu}>
             {open ? <X /> : <Menu />}</button>
-            <p className="text-xl text-spray">Next & Tailwind</p>
+            <p className="text-xl text-java">Next & Tailwind</p>
           </div>
           
-            <div className="hidden md:flex ml-10 items-baseline space-x-4">
+            <div className="hidden items-baseline space-x-2 md:flex">
               {navitem.map((item) => (
                 <NavItem item={item} key={item.name} toggleMenu={undefined}/>
               ))}
             </div>
             {/*Responsive menu*/}
             {open && (
-            <div className="absolute z-50 top-13 bg-spray-950 left-0 w-screen flex flex-col h-screen p-4 md:hidden">
+            <div className="absolute z-50 top-13 bg-java-950 left-0 w-screen flex flex-col h-screen p-4 md:hidden">
             {navitem.map((item) => (
               <NavItem item={item} key={item.name} toggleMenu={toggleMenu}/>
             ))}

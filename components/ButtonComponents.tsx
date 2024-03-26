@@ -1,8 +1,8 @@
-'use client'
-import { cva, VariantProps } from 'class-variance-authority';
+
+import { cva, VariantProps } from 'class-variance-authority'
 import { CustomButtonProps } from '@/types/index'
-import { ComponentProps } from 'react';
-import { twMerge } from 'tailwind-merge';
+import { ComponentProps } from 'react'
+import { twMerge } from 'tailwind-merge'
 
 const buttonStyles = cva(['transition-colors','flex',
     'w-full',
@@ -17,15 +17,13 @@ const buttonStyles = cva(['transition-colors','flex',
     'shadow-sm'],{
     variants:{
         variant:{
-            text:['hover:bg-spray-900'],
-            contained:['bg-supernova','hover:bg-supernova-600'],
-            outlined:['border','text-spray','hover:border-spray-400','hover:text-spray-400','hover:bg-spray-900']
+            text:['hover:bg-java-800'],
+            contained:['bg-java','hover:bg-java-500'],
+            outlined:['border','text-java','hover:border-java-400','hover:text-java-400','hover:bg-java-800']
         },
         size:{
             sm:['py-1','leading-5','text-xs', 'font-light'],
-            md:[],
-            lg:['py-2','leading-6','text-base']
-            
+            md:[]  
         }, 
 },
 defaultVariants:{
@@ -33,18 +31,18 @@ defaultVariants:{
     size:'md'
 }})
 
-const iconStyle = cva(['transition-colors','rounded-full',
+const iconStyle = cva(['transition-colors','rounded',
     'flex',
     'items-center',
     'justify-center',
     'p-1',
-    'hover:bg-spray-400'],{
+    'bg-neutral-900',
+    'hover:bg-java-800'],{
         variants:{
             size:{
                 sm:['w-6','h-6'],
                 md:['w-9','h-9'],
                 lg:['w-10','h-10']
-                
             }, 
     }})
 type ButtonProps = VariantProps<typeof buttonStyles> & ComponentProps<'button'> & CustomButtonProps

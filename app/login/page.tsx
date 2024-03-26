@@ -1,8 +1,10 @@
+import { Button } from "@/components";
+
 const Login = () => {
   
     return ( 
-        <div className="justify-center w-72 m-auto mt-4">
-        <h1 className="text-xl my-4">Log in Your Account</h1>
+        <div className="justify-center w-72 m-auto">
+        <h1 className="text-xl my-4 mt-4">Log in Your Account</h1>
             <form className="space-y-4" action="#" method="POST">
             <div>
             <label htmlFor="email" className="block text-sm font-medium leading-6 text-neutral">
@@ -15,7 +17,7 @@ const Login = () => {
                 type="email"
                 autoComplete="email"
                 required
-                className="block w-full border-0 rounded-sm py-1 text-neutral-900 shadow-sm ring-1 ring-inset ring-neutral-300 placeholder:text-neutral-400 focus:ring-2 focus:ring-inset focus:ring-spray-600 sm:text-sm sm:leading-6"
+                className="block w-full border-0 rounded-sm py-1 text-neutral-900 shadow-sm ring-1 ring-inset ring-neutral-300 placeholder:text-neutral-400 focus:ring-2 focus:ring-inset focus:ring-java-600 sm:text-sm sm:leading-6"
                 />
             </div>
             </div>
@@ -26,7 +28,7 @@ const Login = () => {
                   Password
                 </label>
                 <div className="text-sm">
-                  <a href="#" className="text-spray-600 hover:text-spray">
+                  <a href="#" className="text-java-600 hover:text-java">
                     Forgot password?
                   </a>
                 </div>
@@ -38,17 +40,14 @@ const Login = () => {
                   type="password"
                   autoComplete="current-password"
                   required
-                  className="block w-full rounded-sm border-0 py-1.5 text-neutral-900 shadow-sm ring-1 ring-inset ring-neutral-300 placeholder:text-neutral-400 focus:ring-2 focus:ring-inset focus:ring-spray-600 sm:text-sm sm:leading-6"
+                  className="block w-full rounded-sm border-0 py-1.5 text-neutral-900 shadow-sm ring-1 ring-inset ring-neutral-300 placeholder:text-neutral-400 focus:ring-2 focus:ring-inset focus:ring-java-600 sm:text-sm sm:leading-6"
                 />
               </div>
             </div>
-
-            <button
-                type="submit"
-                className="flex w-full justify-center rounded-sm bg-supernova px-3 py-1.5 text-sm leading-6 shadow-sm hover:bg-supernova-700"
-              >
-                Log in
-            </button>
+            <Button
+              type="submit"
+              title="Log in"
+            />
             </form>
         </div>
      );

@@ -7,16 +7,14 @@ const StyleSheet = () => {
     }
     return ( 
         <>
-        <h1 className="text-xl my-4">Style Sheet</h1>
+        <h1>Style Sheet</h1>
+        <h2>Style Sheet</h2>
         <div className="grid grid-cols-1 gap-2 p-4 md:grid-cols-2 lg:grid-cols-4">
         <Button
           type="submit"
           title="Custom Button"
           handleClick={handleScroll}
         />
-        <IconButton size="sm"><FerrisWheel/></IconButton>
-        <IconButton size="md"><FerrisWheel/></IconButton>
-        <IconButton size="lg"><FerrisWheel/></IconButton>
         <Button
           size="sm"
           variant="outlined"
@@ -25,12 +23,17 @@ const StyleSheet = () => {
           handleClick={handleScroll}
         />
         <Button
-          size="lg"
+          size="md"
           variant="text"
           type="button"
-          title="Text Large"
+          title="Text medium"
           handleClick={handleScroll}
         />
+        <div className="flex flex-row items-center">
+          <IconButton size="sm"><FerrisWheel/></IconButton>
+          <IconButton size="md"><FerrisWheel/></IconButton>
+          <IconButton size="lg"><FerrisWheel/></IconButton>
+        </div>
         </div>
         </>
      );
