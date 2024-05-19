@@ -9,7 +9,7 @@ const Stack = ({ children, spacing = 2, direction = "row", wrap = false }) => {
       }
 
     return ( 
-        <div>{children}</div>
+        <div style={customStyle}>{children}</div>
      );
 }
 
