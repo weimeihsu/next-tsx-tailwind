@@ -43,7 +43,8 @@ const iconStyle = cva(['transition-colors','rounded',
                 md:['w-9','h-9'],
                 lg:['w-10','h-10']
             }, 
-    }})
+}})
+
 type ButtonProps = VariantProps<typeof buttonStyles> & ComponentProps<'button'> & CustomButtonProps
 
 type IconProps = VariantProps<typeof iconStyle> & ComponentProps<'button'>

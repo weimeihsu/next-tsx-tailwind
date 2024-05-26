@@ -1,11 +1,18 @@
-import PropTypes from 'prop-types'
+import { CSSProperties } from 'react'
 
-const Stack = ({ children, spacing = 2, direction = "row", wrap = false }) => {
-    const customStyle = {
+interface StackProps {
+  direction: 'row' | 'column'
+  wrap: boolean
+  spacing: number
+  children: number
+  numberOfChildren: number
+}
+const Stack = ({ children, spacing = 2, direction = "row", wrap = false }: StackProps) => {
+    const customStyle : CSSProperties = {
         display: "flex",
         gap: `${spacing * 0.25}rem`,
         flexWrap: wrap ? "wrap" : "nowrap",
-        flexDirection: direction,
+        flexDirection: direction
       }
 
     return ( 
@@ -13,10 +20,5 @@ const Stack = ({ children, spacing = 2, direction = "row", wrap = false }) => {
      );
 }
 
-Stack.propTypes = {
-    spacing: PropTypes.number,
-    wrap: PropTypes.bool,
-    direction: PropTypes.oneOf(["row", "column"]),
-  }
 
 export default Stack;
