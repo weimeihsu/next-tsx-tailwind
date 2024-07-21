@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import colors from 'tailwindcss/colors'
 
 const config: Config = {
   content: [
@@ -61,6 +62,10 @@ const config: Config = {
       '950': '#431f05',
   },},
     extend: {
+      colors:{
+        primary:colors.fuchsia,
+        secondary:colors.amber
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

@@ -3,7 +3,7 @@ import { CustomButtonProps } from '@/types/index'
 import { ComponentProps } from 'react'
 import { twMerge } from 'tailwind-merge'
 
-const buttonStyles = cva(['transition-colors','flex',
+const btnStyles = cva(['transition-colors','flex',
     'w-full',
     'h-fit',
     'justify-center',
@@ -13,21 +13,39 @@ const buttonStyles = cva(['transition-colors','flex',
     'py-1.5',
     'text-sm',
     'leading-6',
-    'shadow-sm'],{
+    'shadow-sm',
+    'disabled:cursor-not-allowed'],{
     variants:{
         variant:{
-            text:['hover:bg-java-800'],
             contained:['bg-java','hover:bg-java-500'],
-            outlined:['border','text-java','hover:border-java-400','hover:text-java-400','hover:bg-java-800']
+            outlined:['border'],
+            ghost:['duration-300']
         },
         size:{
             sm:['py-1','leading-5','text-xs', 'font-light'],
             md:[]  
         }, 
+        colorScheme:{
+            primary:['text-java','hover:border-java-400','hover:text-java-400','hover:bg-java-800'],
+            secondary:['text-java-400',]
+        }
 },
+compoundVariants:[
+    {
+        variant:'contained',
+        colorScheme:'primary',
+        className:'hover:bg-primary-100'
+    },
+    {
+        variant:'outlined',
+        colorScheme:'secondary',
+        className:'hover:bg-secondary-100'
+    }
+],
 defaultVariants:{
     variant:'contained',
-    size:'md'
+    size:'md',
+    colorScheme:'primary'
 }})
 
 const iconStyle = cva(['transition-colors','rounded',
@@ -45,7 +63,7 @@ const iconStyle = cva(['transition-colors','rounded',
             }, 
 }})
 
-type ButtonProps = VariantProps<typeof buttonStyles> & ComponentProps<'button'> & CustomButtonProps
+type ButtonProps = VariantProps<typeof btnStyles> & ComponentProps<'button'> & CustomButtonProps
 
 type IconProps = VariantProps<typeof iconStyle> & ComponentProps<'button'>
 
@@ -54,7 +72,7 @@ const Button = ({title, type, handleClick, variant, size, className, ...props}: 
         <button
             disabled={false}
             type={type}
-            className={twMerge(className, buttonStyles({variant, size}))}
+            className={twMerge(className, btnStyles({variant, size}))}
             onClick={handleClick}
             {...props}
         >
