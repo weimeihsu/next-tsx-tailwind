@@ -63,8 +63,8 @@ const config: Config = {
   },},
     extend: {
       colors:{
-        primary:colors.fuchsia,
-        secondary:colors.amber
+        // primary:colors.indigo,
+        // secondary:colors.amber
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

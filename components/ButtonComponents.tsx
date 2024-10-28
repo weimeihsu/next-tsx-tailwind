@@ -18,7 +18,7 @@ const btnStyles = cva(['transition-colors','flex',
     variants:{
         variant:{
             contained:['bg-java','hover:bg-java-500'],
-            outlined:['border'],
+            outlined:['border','border-java','text-java'],
             ghost:['duration-300']
         },
         size:{
@@ -26,26 +26,26 @@ const btnStyles = cva(['transition-colors','flex',
             md:[]  
         }, 
         colorScheme:{
-            primary:['text-java','hover:border-java-400','hover:text-java-400','hover:bg-java-800'],
+            primary:['text-white','hover:border-java-400','hover:text-java-400','hover:bg-java-800'],
             secondary:['text-java-400',]
         }
 },
 compoundVariants:[
     {
-        variant:'contained',
-        colorScheme:'primary',
-        className:'hover:bg-primary-100'
+        variant:'ghost',
+        // colorScheme:'primary',
+        className:'hover:bg-java-800'
     },
     {
         variant:'outlined',
-        colorScheme:'secondary',
-        className:'hover:bg-secondary-100'
+        // colorScheme:'secondary',
+        className:'hover:bg-java-800'
     }
 ],
 defaultVariants:{
     variant:'contained',
     size:'md',
-    colorScheme:'primary'
+    // colorScheme:'primary'
 }})
 
 const iconStyle = cva(['transition-colors','rounded',
