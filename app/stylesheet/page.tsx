@@ -33,7 +33,7 @@ const StyleSheet = () => {
           />
           <Button
             size="md"
-            variant="text"
+            variant="ghost"
             type="button"
             title="Text medium"
             handleClick={handleScroll}
