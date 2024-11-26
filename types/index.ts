@@ -6,3 +6,6 @@ export interface CustomButtonProps {
     handleClick?: MouseEventHandler
 }
 
+export interface IconButtonProps {
+    text:string,
+}
