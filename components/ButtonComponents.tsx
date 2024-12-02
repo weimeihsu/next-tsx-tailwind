@@ -1,5 +1,5 @@
 import { cva, VariantProps } from 'class-variance-authority'
-import { CustomButtonProps } from '@/types/index'
+import { CustomButtonProps, CustomIconButtonProps } from '@/types/index'
 import { ComponentProps } from 'react'
 import { twMerge } from 'tailwind-merge'
 
@@ -66,6 +66,8 @@ const iconStyle = cva(['transition-colors','rounded',
 type ButtonProps = VariantProps<typeof btnStyles> & ComponentProps<'button'> & CustomButtonProps
 
 type IconProps = VariantProps<typeof iconStyle> & ComponentProps<'button'>
+
+type IconButtonProps = VariantProps<typeof >
 
 const Button = ({title, type, handleClick, variant, size, className, ...props}: ButtonProps) => {
     return ( 
