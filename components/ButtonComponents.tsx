@@ -1,5 +1,5 @@
 import { cva, VariantProps } from 'class-variance-authority'
-import { CustomButtonProps, CustomIconButtonProps } from '@/types/index'
+import { CustomIconButtonProps } from '@/types/index'
 import { ComponentProps } from 'react'
 import { twMerge } from 'tailwind-merge'
 
@@ -63,13 +63,11 @@ const iconStyle = cva(['transition-colors','rounded',
             }, 
 }})
 
-type ButtonProps = VariantProps<typeof btnStyles> & ComponentProps<'button'> & CustomButtonProps
+type ButtonProps = VariantProps<typeof btnStyles> & ComponentProps<'button'> & CustomIconButtonProps
 
 type IconProps = VariantProps<typeof iconStyle> & ComponentProps<'button'>
 
-type IconButtonProps = VariantProps<typeof >
-
-const Button = ({title, type, handleClick, variant, size, className, ...props}: ButtonProps) => {
+const Button = ({text, type, Icon, showIcon = true, iconPosition,handleClick, variant, size, className, ...props}: ButtonProps) => {
     return ( 
         <button
             disabled={false}
@@ -78,9 +76,9 @@ const Button = ({title, type, handleClick, variant, size, className, ...props}: 
             onClick={handleClick}
             {...props}
         >
-            <span className={`flex-1`}>
-                {title}
-            </span>
+            {showIcon && Icon && iconPosition==='prefix' && <Icon className="w-5 h-5" />}
+            <span className={`flex-1`}>{text}</span>
+            {showIcon && Icon && iconPosition==='append' && <Icon className="w-5 h-5" />}
         </button>
      );
 }
