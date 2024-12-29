@@ -21,21 +21,27 @@ const StyleSheet = () => {
         <div className="border-b-2 border-java text-sm text-java font-light leading-8">Buttons</div>
           <Button
           type="submit"
-          title="Custom Button"
+          text="Custom Button"
           handleClick={handleScroll}
+          Icon={FerrisWheel}
+          showIcon={true}
+          iconPosition="append"
           />
           <Button
             size="sm"
             variant="outlined"
             type="button"
-            title="Outlined Small"
+            text="Outlined Small"
             handleClick={handleScroll}
+            Icon={FerrisWheel}
+            showIcon={true}
+            iconPosition="prefix"
           />
           <Button
             size="md"
             variant="ghost"
             type="button"
-            title="Text medium"
+            text="Text medium"
             handleClick={handleScroll}
           />
         </div>
