@@ -1,4 +1,4 @@
-'use client'
+
 import { Button, IconButton } from "@/components"
 import { FerrisWheel } from 'lucide-react'
 const StyleSheet = () => {

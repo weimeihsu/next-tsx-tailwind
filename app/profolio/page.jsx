@@ -6,7 +6,7 @@ import { collection, getDocs } from "firebase/firestore"
 import Image from "next/image"
 
 const fetchImg = async () =>{
-    const querySnapshot = await getDocs(collection(db, 'img-the-crew'))
+    const querySnapshot = await getDocs(collection(db, 'illustration'))
     const imgs = []
     querySnapshot.forEach(doc=>{
         imgs.push({id:doc.id, ...doc.data()})

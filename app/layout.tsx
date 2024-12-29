@@ -22,7 +22,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={roboto.className + 'w-screen h-screen'}>
         <Header/>
-        <main className="container mx-auto">{children}</main></body>
+        <main className="container mx-auto p-3">{children}</main></body>
     </html>
   );
 }

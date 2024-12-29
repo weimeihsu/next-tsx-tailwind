@@ -8,13 +8,14 @@ import { getFirestore } from "firebase/firestore"
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyAsuWQ0f_NvsVRQ07FdvhiZqL7f9FWbiI0",
-  authDomain: "vuetify-5dea0.firebaseapp.com",
-  projectId: "vuetify-5dea0",
-  storageBucket: "vuetify-5dea0.appspot.com",
-  messagingSenderId: "276835695748",
-  appId: "1:276835695748:web:526dfe212c52ca978596d1",
-  measurementId: "G-NKKMG2VFQ8"
+  apiKey: "AIzaSyB0GBOURr6G-nkCT_oL9jjKhf2nwaw80VY",
+  authDomain: "my-vue-8743f.firebaseapp.com",
+  databaseURL: "https://my-vue-8743f-default-rtdb.firebaseio.com",
+  projectId: "my-vue-8743f",
+  storageBucket: "my-vue-8743f.appspot.com",
+  messagingSenderId: "4609273216",
+  appId: "1:4609273216:web:3d968bac26418e7de3e565",
+  measurementId: "G-DLNJSBPKGP"
 };
 
 // Initialize Firebase

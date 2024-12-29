@@ -5,10 +5,12 @@ import { X } from "lucide-react"
 import { useState } from "react"
 
 const navitem =[
-  { name: 'Home', path: '/'},
-  { name: 'Gallery', path: '/gallery'},
+  { name: 'Welcome', path: '/'},
+  { name: 'Profolio', path: '/profolio'},
   { name: 'Login', path: '/login' },
-  { name: 'Style Sheet', path: '/stylesheet' },
+  { name: 'Design System', path: '/design-system' },
+  { name: 'Resume', path: '/resume' },
+  { name: 'More', path: '/more' },
 ]
 
 const Header = () => {
@@ -18,7 +20,7 @@ const Header = () => {
   }
     return ( 
         <header className="border-b border-neutral-900">
-          <nav className="flex flex-col mx-auto justify-start p-3 md:flex-row md:justify-between md:items-center md:max-w-7xl lg:px-8" aria-label="Global">
+          <nav className="flex flex-col mx-auto justify-start p-3 md:flex-row md:justify-between md:items-center md:max-w-7xl " aria-label="Global">
           <div className="flex flex-row">
             <button className="z-50 relative mr-2 md:hidden" onClick={toggleMenu}>
             {open ? <X /> : <Menu />}</button>
