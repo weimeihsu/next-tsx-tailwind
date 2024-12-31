@@ -46,7 +46,9 @@ const Login = () => {
             </div>
             <Button
               type="submit"
-              title="Log in"
+              text="Login"
+              showIcon={false}
+              iconPosition="append"
             />
             </form>
         </div>
