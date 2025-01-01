@@ -7,7 +7,7 @@ const NavItem = ({navitems, toggleMenu}) => {
   return (
     <>
       {navitems.map(({path, name})=>(
-        <Link key={name} href={path} className={'rounded-md px-3 py-2 text-sm font-medium'+(pathName === path ? 'text-white bg-neutral-900' : 'text-neutral-300 hover:bg-neutral-700 hover:text-white')} onClick={toggleMenu}>
+        <Link key={name} href={path} className={'rounded-sm px-3 py-2 text-sm font-normal'+(pathName === path ? 'text-white bg-neutral-900' : ' hover:bg-neutral-800')} onClick={toggleMenu}>
         {name} 
         </Link>
       ))} 

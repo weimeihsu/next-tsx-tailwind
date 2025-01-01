@@ -14,20 +14,20 @@ const navitems =[
 ]
 
 const Header = () => {
-  const [ open, SetOpen ] = useState(false)
+  const [ open, setOpen ] = useState(false)
   const toggleMenu = ()=>{
-    SetOpen(!open)
+    setOpen(!open)
   }
     return ( 
         <header className="border-b border-neutral-900">
-          <nav className="flex flex-col mx-auto justify-start p-3 md:flex-row md:justify-between md:items-center md:max-w-7xl " aria-label="Global">
+          <nav className="flex flex-col mx-auto justify-start p-3 md:flex-row md:justify-between md:items-center md:max-w-7xl" aria-label="Global">
           <div className="flex flex-row">
             <button className="z-50 relative mr-2 md:hidden" onClick={toggleMenu}>
             {open ? <X /> : <Menu />}</button>
             <p className="text-xl text-java">Next & Tailwind</p>
           </div>
           
-            <div className="hidden items-baseline space-x-2 md:flex">
+            <div className="hidden items-baseline md:flex">
                 <NavItem navitems={navitems} toggleMenu={undefined}/>
             </div>
             {/*Responsive menu*/}

@@ -10,7 +10,7 @@ const btnStyles = cva(['transition-colors','flex',
     'items-center',
     'rounded-sm',
     'px-3',
-    'py-1.5',
+    'py-2',
     'text-sm',
     'leading-6',
     'shadow-sm',
@@ -19,7 +19,8 @@ const btnStyles = cva(['transition-colors','flex',
         variant:{
             contained:['bg-java','hover:bg-java-500'],
             outlined:['border','border-java','text-java'],
-            ghost:['duration-300']
+            ghost:['duration-300'],
+            nav:['text-white', 'hover:bg-neutral-800']
         },
         size:{
             sm:['py-1','leading-5','text-xs', 'font-light'],
@@ -27,25 +28,12 @@ const btnStyles = cva(['transition-colors','flex',
         }, 
         colorScheme:{
             primary:['text-white','hover:border-java-400','hover:text-java-400','hover:bg-java-800'],
-            secondary:['text-java-400',]
+            
         }
 },
-compoundVariants:[
-    {
-        variant:'ghost',
-        // colorScheme:'primary',
-        className:'hover:bg-java-800'
-    },
-    {
-        variant:'outlined',
-        // colorScheme:'secondary',
-        className:'hover:bg-java-800'
-    }
-],
 defaultVariants:{
     variant:'contained',
     size:'md',
-    // colorScheme:'primary'
 }})
 
 const iconStyle = cva(['transition-colors','rounded',
@@ -67,12 +55,12 @@ type ButtonProps = VariantProps<typeof btnStyles> & ComponentProps<'button'> & C
 
 type IconProps = VariantProps<typeof iconStyle> & ComponentProps<'button'>
 
-const Button = ({text, type, Icon, showIcon = true, iconPosition,handleClick, variant, size, className, ...props}: ButtonProps) => {
+const Button = ({text, type, Icon, showIcon = true, iconPosition,handleClick, variant, size, colorScheme, className, ...props}: ButtonProps) => {
     return ( 
         <button
             disabled={false}
             type={type}
-            className={twMerge(className, btnStyles({variant, size}))}
+            className={twMerge(className, btnStyles({variant, size, colorScheme}))}
             onClick={handleClick}
             {...props}
         >

@@ -1,6 +1,7 @@
 import { db } from "../../firebase/config" 
 import { collection, getDocs } from "firebase/firestore"
 import Cards from "./component/Cards"
+import SideMenu from "./component/SideMenu"
 
 // const fetchImg = async () =>{
 //     const querySnapshot = await getDocs(collection(db, 'illustration'))
@@ -18,10 +19,18 @@ const Gallery = async () => {
         id:doc.id, ...doc.data()
     }))
     
-    return ( <>
+    return ( 
+    <>
         <div className="text-lg">Images Fetched from Firebase</div>
-        <Cards imgs={imgs}/>
-        </>
+        <div className="flex gap-2">
+            <div className="w-48">
+            <SideMenu/>
+            </div>
+            <Cards imgs={imgs}/>
+            
+        </div>
+        
+    </>
      );
 }
  

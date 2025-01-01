@@ -20,6 +20,10 @@ const StyleSheet = () => {
         </div>
         <div className="flex flex-col gap-y-2">
         <div className="border-b-2 border-java text-sm text-java font-light leading-8">Buttons</div>
+          <Button 
+          type="button"
+          text="navBtn"
+          variant="nav"/>
           <Button
           type="submit"
           text="Custom Button"
