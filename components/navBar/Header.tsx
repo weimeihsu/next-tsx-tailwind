@@ -4,7 +4,7 @@ import { Menu }  from "lucide-react"
 import { X } from "lucide-react"
 import { useState } from "react"
 
-const navitem =[
+const navitems =[
   { name: 'Welcome', path: '/'},
   { name: 'Profolio', path: '/profolio'},
   { name: 'Login', path: '/login' },
@@ -28,16 +28,12 @@ const Header = () => {
           </div>
           
             <div className="hidden items-baseline space-x-2 md:flex">
-              {navitem.map((item) => (
-                <NavItem item={item} key={item.name} toggleMenu={undefined}/>
-              ))}
+                <NavItem navitems={navitems} toggleMenu={undefined}/>
             </div>
             {/*Responsive menu*/}
             {open && (
             <div className="absolute z-50 top-13 bg-java-950 left-0 w-screen flex flex-col h-screen p-4 md:hidden">
-            {navitem.map((item) => (
-              <NavItem item={item} key={item.name} toggleMenu={toggleMenu}/>
-            ))}
+              <NavItem navitems={navitems} toggleMenu={toggleMenu}/>
           </div>)}
           </nav>
         </header>
