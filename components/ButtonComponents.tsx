@@ -34,7 +34,6 @@ const iconStyle = cva(['transition-colors','rounded',
     'flex',
     'items-center',
     'justify-center',
-    'p-1',
     'bg-neutral-900',
     'hover:bg-java-800'],{
         variants:{
