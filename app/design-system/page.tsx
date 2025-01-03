@@ -22,8 +22,8 @@ const StyleSheet = () => {
         <div className="border-b-2 border-java text-sm text-java font-light leading-8">Buttons</div>
           <Button 
           type="button"
-          text="navBtn"
-          variant="nav"/>
+          text="Primary md"
+          intent="soft"/>
           <Button
           type="submit"
           text="Custom Button"
@@ -34,9 +34,9 @@ const StyleSheet = () => {
           />
           <Button
             size="sm"
-            variant="outlined"
+            intent="secondary"
             type="button"
-            text="Outlined Small"
+            text="Secondary Sm"
             handleClick={handleScroll}
             Icon={FerrisWheel}
             showIcon={true}
@@ -44,9 +44,9 @@ const StyleSheet = () => {
           />
           <Button
             size="md"
-            variant="ghost"
+            intent="ghost"
             type="button"
-            text="Text medium"
+            text="Ghoust md"
             handleClick={handleScroll}
           />
         </div>
