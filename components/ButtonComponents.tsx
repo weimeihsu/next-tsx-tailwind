@@ -16,13 +16,13 @@ const btnStyles = cva(['transition-colors','flex',
     variants:{
         intent:{
             primary:['text-white','bg-java','hover:bg-java-500','border-transparent'],
-            secondary:['text-java','border-java','hover:bg-java-500'],
+            secondary:['text-java','border','border-java','hover:bg-java-800'],
             soft:['text-white', 'bg-neutral-900', 'hover:bg-neutral-800'],
-            ghost:['text-java','duration-300','hover:bg-java-500'], 
+            ghost:['text-java','duration-300','hover:bg-java-500','hover:bg-java-800'], 
         },
         size:{
-            sm:['py-1','leading-5','text-xs', 'font-light'],
-            md:['py-2','leading-6','text-sm','font-normal']  
+            sm:['py-1','leading-5','text-sm', 'font-light'],
+            md:['py-2','leading-6','text-md','font-normal']  
         }
 },
 defaultVariants:{
@@ -34,15 +34,23 @@ const iconStyle = cva(['transition-colors','rounded',
     'flex',
     'items-center',
     'justify-center',
-    'bg-neutral-900',
-    'hover:bg-java-800'],{
-        variants:{
-            size:{
-                sm:['w-6','h-6'],
-                md:['w-9','h-9'],
-                lg:['w-10','h-10']
-            }, 
-}})
+    ],{
+    variants:{
+        intent:{
+            icon:[],
+            button:['p-2','bg-neutral-900', 'hover:bg-java-800']
+        },
+        size:{
+            xs:['w-3','h-3'],
+            sm:['w-4','h-4'],
+            md:['w-5','h-5'],
+            lg:['w-8','h-8']
+        } 
+        
+},
+defaultVariants: {
+    size: "md",
+  },})
 
 type ButtonProps = VariantProps<typeof btnStyles> & ComponentProps<'button'> & CustomIconButtonProps
 
@@ -57,16 +65,18 @@ const Button = ({text, type, Icon, showIcon = true, iconPosition, handleClick, i
             onClick={handleClick}
             {...props}
         >
-            {showIcon && Icon && iconPosition==='prefix' && <Icon className="w-5 h-5" />}
-            <span className={`flex-1`}>{text}</span>
-            {showIcon && Icon && iconPosition==='append' && <Icon className="w-5 h-5" />}
+            {showIcon && Icon && iconPosition==='prefix' && 
+            (<Icon className={twMerge(iconStyle({ size }), "mr-2")} />)}
+            {text}
+            {showIcon && Icon && iconPosition==='append' && 
+            (<Icon className={twMerge(iconStyle({ size }), "ml-2")} />)}
         </button>
      );
 }
 
-const IconButton = ({size, ...props}:IconProps) => {
+const IconButton = ({size, intent, ...props}:IconProps) => {
     return( 
-        <button className={iconStyle({size})} {...props}/>
+        <button className={iconStyle({size, intent})} {...props}/>
     )
 }
  

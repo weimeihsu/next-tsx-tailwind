@@ -22,39 +22,52 @@ const StyleSheet = () => {
         <div className="border-b-2 border-java text-sm text-java font-light leading-8">Buttons</div>
           <Button 
           type="button"
-          text="Primary md"
-          intent="soft"/>
+          text="default is the primary md"
+          />
           <Button
           type="submit"
-          text="Custom Button"
+          text="secondary md"
+          intent="secondary"
           handleClick={handleScroll}
           Icon={FerrisWheel}
           showIcon={true}
           iconPosition="append"
           />
           <Button
-            size="sm"
-            intent="secondary"
             type="button"
-            text="Secondary Sm"
+            text="Ghoust md"
+            intent="ghost"
+            handleClick={handleScroll}
+          />
+          <Button
+            type="button"
+            size="sm"
+            text="primary Sm"
             handleClick={handleScroll}
             Icon={FerrisWheel}
             showIcon={true}
             iconPosition="prefix"
           />
-          <Button
-            size="md"
-            intent="ghost"
+           <Button
             type="button"
-            text="Ghoust md"
+            size="sm"
+            text="secondary sm"
+            intent="secondary"
+            handleClick={handleScroll}
+          />
+          <Button
+            type="button"
+            size="sm"
+            text="Ghoust sm"
+            intent="ghost"
             handleClick={handleScroll}
           />
         </div>
         
         <div className="flex flex-col gap-y-2">
         <div className="border-b-2 border-java text-sm text-java font-light leading-8">Icons</div>
-          <IconButton size="sm"><FerrisWheel/></IconButton>
-          <IconButton size="md"><FerrisWheel/></IconButton>
+          <IconButton size="lg" intent="button"><FerrisWheel/></IconButton>
+          <IconButton ><FerrisWheel/></IconButton>
           <IconButton size="lg"><FerrisWheel/></IconButton>
         </div>
         </div>
