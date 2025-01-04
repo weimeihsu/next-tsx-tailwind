@@ -18,9 +18,8 @@ export const Default: Story = {
     args: {
         title:'Button',
         type:'submit',
-        variant:'contained',
+        intent:'primary',
         size:'md',
-        colorScheme:'primary'
     }
 }
   
