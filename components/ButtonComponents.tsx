@@ -7,12 +7,11 @@ const btnStyles = cva(['transition-colors','flex',
     'w-full',
     'h-fit',
     'font-normal',
-    'justify-center',
-    'items-center',
     'rounded-sm',
     'px-3',
     'py-2',
     'shadow-sm',
+    'items-center',
     'disabled:cursor-not-allowed'],{
     variants:{
         intent:{
@@ -24,6 +23,10 @@ const btnStyles = cva(['transition-colors','flex',
         size:{
             sm:['leading-5','text-sm', 'font-light'],
             md:['leading-6','text-md','font-normal']  
+        },
+        align:{
+            left:['justify-normal'],
+            center:['justify-center',]
         }
 },
 defaultVariants:{
@@ -58,7 +61,7 @@ type ButtonProps = VariantProps<typeof btnStyles> & ComponentProps<'button'> & C
 
 type IconProps = VariantProps<typeof iconStyle> & ComponentProps<'button'>
 
-const Button = ({text, type, Icon, showIcon = true, iconPosition, handleClick, intent, size, className, ...props}: ButtonProps) => {
+const Button = ({text, type, Icon, showIcon = true, iconPosition, handleClick, intent, size, align, className, ...props}: ButtonProps) => {
     return ( 
         <button
             disabled={false}

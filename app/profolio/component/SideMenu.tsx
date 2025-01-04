@@ -1,6 +1,5 @@
 'use client'
 import { 
-  Typography,
   List,
   ListItem,
   ListItemPrefix,
@@ -9,18 +8,18 @@ import {
   AccordionBody,
  } from '@material-tailwind/react';
 
-import { ChevronDown, ChevronUp } from 'lucide-react'
+import { ChevronDown } from 'lucide-react'
 import { useState } from "react";
 
 const sidemenuitems =[
     { name: 'UIUX', path: '/',
         children:[
-            {name:'User Interface'},
-            {name:'User Journey'},
-            {name:'Prototype'}
+            {name:'User Interface', path:'/ui'},
+            {name:'User Journey', path:'ux'},
+            {name:'Prototype', path:'prototype'}
         ]
     },
-    { name: 'Graphic & Web', path: '/login' },
+    { name: 'Graphic & Web', path: '/graphic' },
     { name: 'Design System', path: '/design-system' },
   ]
 
@@ -43,7 +42,7 @@ const SideMenu = () => {
               </ListItemPrefix>
                {item.name}
               </AccordionHeader> : item.name
-            }
+              }
             </ListItem>
 
             <AccordionBody className="py-0">
@@ -51,11 +50,11 @@ const SideMenu = () => {
               {item.children?.map((childitem, childIdx)=>(
                 <ListItem key={childIdx} className={'rounded-sm py-2 pl-10'+(selected === true ? 'bg-neutral-900' : '')}>
                 {childitem.name}
-              </ListItem>
+                </ListItem>
               ))}
-            </List></AccordionBody>
+            </List>
+            </AccordionBody>
           </Accordion>
-          
         ))}
       </List>
      );

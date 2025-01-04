@@ -1,7 +1,8 @@
 import { db } from "../../firebase/config" 
 import { collection, getDocs } from "firebase/firestore"
 import Cards from "./component/Cards"
-import SideMenu from "./component/SideMenu"
+// import SideMenu from "./component/SideMenu"
+import SideBar from "./component/sideBar/SideBar"
 
 // const fetchImg = async () =>{
 //     const querySnapshot = await getDocs(collection(db, 'illustration'))
@@ -23,8 +24,8 @@ const Profolio = async () => {
     <>
         <div className="text-lg">Images Fetched from Firebase</div>
         <div className="flex gap-2">
-            <div className="w-48">
-            <SideMenu/>
+            <div className="flex-none w-48">
+            <SideBar/>
             </div>
             <Cards imgs={imgs}/> 
         </div>      
