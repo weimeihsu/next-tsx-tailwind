@@ -3,7 +3,7 @@ const nextConfig = {
     eslint: {
         ignoreDuringBuilds: true,
     },
-    output: 'export',
+    output: 'standalone',
     images: {
         unoptimized: true,
         remotePatterns: [
