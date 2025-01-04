@@ -6,6 +6,7 @@ import { twMerge } from 'tailwind-merge'
 const btnStyles = cva(['transition-colors','flex',
     'w-full',
     'h-fit',
+    'font-normal',
     'justify-center',
     'items-center',
     'rounded-sm',
@@ -17,12 +18,12 @@ const btnStyles = cva(['transition-colors','flex',
         intent:{
             primary:['text-white','bg-java','hover:bg-java-500','border-transparent'],
             secondary:['text-java','border','border-java','hover:bg-java-800'],
-            soft:['text-white', 'bg-neutral-900', 'hover:bg-neutral-800'],
+            soft:['text-white', 'hover:bg-neutral-800'],
             ghost:['text-java','duration-300','hover:bg-java-500','hover:bg-java-800'], 
         },
         size:{
-            sm:['py-1','leading-5','text-sm', 'font-light'],
-            md:['py-2','leading-6','text-md','font-normal']  
+            sm:['leading-5','text-sm', 'font-light'],
+            md:['leading-6','text-md','font-normal']  
         }
 },
 defaultVariants:{
@@ -30,7 +31,8 @@ defaultVariants:{
     size:'md',
 }})
 
-const iconStyle = cva(['transition-colors','rounded',
+const iconStyle = cva(['transition-colors',
+    'rounded',
     'flex',
     'items-center',
     'justify-center',

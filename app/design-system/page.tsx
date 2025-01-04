@@ -39,6 +39,12 @@ const StyleSheet = () => {
             intent="ghost"
             handleClick={handleScroll}
           />
+           <Button
+            type="button"
+            text="soft md"
+            intent="soft"
+            handleClick={handleScroll}
+          />
           <Button
             type="button"
             size="sm"
@@ -62,10 +68,18 @@ const StyleSheet = () => {
             intent="ghost"
             handleClick={handleScroll}
           />
+          <Button
+            type="button"
+            size="sm"
+            text="soft md"
+            intent="soft"
+            handleClick={handleScroll}
+          />
         </div>
         
         <div className="flex flex-col gap-y-2">
         <div className="border-b-2 border-java text-sm text-java font-light leading-8">Icons</div>
+          <IconButton size="sm"><FerrisWheel/></IconButton>
           <IconButton size="lg" intent="button"><FerrisWheel/></IconButton>
           <IconButton ><FerrisWheel/></IconButton>
           <IconButton size="lg"><FerrisWheel/></IconButton>
