@@ -20,7 +20,6 @@ const sidemenuitems =[
             {name:'Prototype'}
         ]
     },
-    { name: 'Prototype', path: '/profolio'},
     { name: 'Graphic & Web', path: '/login' },
     { name: 'Design System', path: '/design-system' },
   ]
@@ -58,34 +57,6 @@ const SideMenu = () => {
           </Accordion>
           
         ))}
-        {/* <Accordion open={open === true}>
-          <ListItem key={idx} onClick={handleSelected(idx)} className={`py-0 rounded-sm hover:bg-neutral-800  ${selected === idx ? "bg-neutral-900": ""}`} selected={open === true}>
-            <AccordionHeader onClick={toggleMenu} className="border-b-0 py-2 justify-start text-white text-sm font-normal hover:text-white">
-              <ListItemPrefix className='mr-2'>
-                <ChevronDown className="h-4 w-4 text-white" />
-              </ListItemPrefix>
-                Dashboard
-            </AccordionHeader>
-          </ListItem>
-          <AccordionBody className="py-0">
-            <List className="p-0 text-white text-sm min-w-0">
-              <ListItem onClick={handleSelected} className="rounded-sm py-2 pl-10">
-                Analytics
-              </ListItem>
-              <ListItem className="rounded-sm py-2 pl-10">
-                Reporting
-              </ListItem>
-              <ListItem className="rounded-sm py-2 pl-10">
-                Projects
-              </ListItem>
-            </List>
-          </AccordionBody>
-        </Accordion> */}
-    
-        {/* <ListItem className="text-white text-sm rounded-sm py-2 pl-10">
-          Inbox
-        </ListItem> */}
-        
       </List>
      );
 }

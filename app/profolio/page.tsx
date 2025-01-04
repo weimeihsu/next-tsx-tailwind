@@ -12,7 +12,7 @@ import SideMenu from "./component/SideMenu"
 //     return imgs
 // }
 
-const Gallery = async () => {
+const Profolio = async () => {
     // const [imgs, setImgs] = useState([])
     const querySnapshot = await getDocs(collection(db, 'illustration'))
     const imgs = querySnapshot.docs.map(doc=>({
@@ -26,12 +26,10 @@ const Gallery = async () => {
             <div className="w-48">
             <SideMenu/>
             </div>
-            <Cards imgs={imgs}/>
-            
-        </div>
-        
+            <Cards imgs={imgs}/> 
+        </div>      
     </>
-     );
+    );
 }
  
-export default Gallery;
+export default Profolio;
