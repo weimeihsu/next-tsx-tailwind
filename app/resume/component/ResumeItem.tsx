@@ -4,6 +4,7 @@ interface ChildItem {
 }
 
 interface ResumeItem {
+id:string
 comp: string;
 icon: string;
 date: string;
