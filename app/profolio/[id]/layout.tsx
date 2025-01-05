@@ -4,7 +4,7 @@ const ProfolioLayout = ({children}:{
 }) => {
     return ( 
     <div className="flex gap-2">
-        <div className="w-48">
+        <div className="flex-none w-48">
             <SideBar/>
         </div>
         <main>{children}</main>

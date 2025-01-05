@@ -7,9 +7,10 @@ const Home = () => {
   return ( 
     <main>
       <div className="p-6 max-w-sm mx-auto flex flex-col items-center space-x-4">
-      <div className="flex flex-row gap-x-1">
+      <div className="flex flex-row gap-x-1 items-center">
         <FerrisWheel className="text-java"/>
-        <p className="text-xl text-java ml-2">Cheer Up!</p>
+        <p className="text-xl m-2">Cheer Up!</p>
+        <FerrisWheel className="text-java"/>
       </div>
           <Lottie animationData={anima}/>
       </div>

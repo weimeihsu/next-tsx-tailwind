@@ -5,12 +5,12 @@ import { X } from "lucide-react"
 import { useState } from "react"
 
 const navitems =[
-  { name: 'Welcome', path: '/'},
-  { name: 'Profolio', path: '/profolio'},
-  { name: 'Login', path: '/login' },
-  { name: 'Design System', path: '/design-system' },
-  { name: 'Resume', path: '/resume' },
-  { name: 'More', path: '/more' },
+  { id:'nav1', name: 'Welcome', path: '/'},
+  { id:'nav2',name: 'Profolio', path: '/profolio'},
+  { id:'nav3',name: 'Login', path: '/login' },
+  { id:'nav4',name: 'Design System', path: '/design-system' },
+  { id:'nav5',name: 'Resume', path: '/resume' },
+  { id:'nav6',name: 'More', path: '/more' },
 ]
 
 const Header = () => {

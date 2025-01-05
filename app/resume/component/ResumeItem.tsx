@@ -1,8 +1,21 @@
 import Image from "next/image"
-import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal, PromiseLikeOfReactNode, Key } from "react";
+interface ChildItem {
+    children?: ChildItem[];
+}
 
-const ResumenItem = ({resumeItems}) => {
+interface ResumeItem {
+id: string;
+comp: string;
+icon: string;
+date: string;
+title: string;
+list: string[];
+}
 
+interface ResumenItemProps {
+    resumeItems: ResumeItem[];
+}
+const ResumenItem: React.FC<ResumenItemProps> = ({resumeItems}) => {
     return ( 
         <div className="grid grid-cols-1 gap-x-6 gap-y-8 md:grid-cols-2 lg:grid-cols-2">
             {resumeItems.map(({id, comp, icon, date, title, list})=>(
@@ -24,10 +37,10 @@ const ResumenItem = ({resumeItems}) => {
 
                     <p>{title}</p>
                     <p className="text-sm font-light text-neutral-600">{date}</p>
-                    <ul className="list-disc list-outside pl-4">{list.map((li: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | PromiseLikeOfReactNode, idx: Key)=>
-                        <li key={idx} className="text-sm font-light mb-1">{li}</li>)}
-                    </ul>
-                    
+                    <ul className="list-disc list-outside pl-4" role="list">
+                        {list.map((listChild)=>
+                        <li key={listChild} className="text-sm font-light mb-1">{listChild}</li>)}
+                    </ul> 
                 </div>     
             ))}
         </div>

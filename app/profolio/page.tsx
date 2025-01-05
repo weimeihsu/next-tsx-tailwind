@@ -22,7 +22,6 @@ const Profolio = async () => {
     
     return ( 
     <>
-        <div className="text-lg">Images Fetched from Firebase</div>
         <div className="flex gap-2">
             <div className="flex-none w-48">
             <SideBar/>
