@@ -1,7 +1,4 @@
 import Image from "next/image"
-interface ChildItem {
-    children?: ChildItem[];
-}
 
 interface ResumeItem {
 id:string

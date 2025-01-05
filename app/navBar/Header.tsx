@@ -1,4 +1,5 @@
 'use client'
+
 import NavItem from "./NavItem"
 import { Menu }  from "lucide-react"
 import { X } from "lucide-react"

@@ -1,6 +1,7 @@
 import { db } from "../../../firebase/config" 
 import { collection, getDocs } from "firebase/firestore"
-import Cards from "../component/Cards";
+import Cards from "../component/Cards"
+
 const GraphicDesign = async ({ params }) => {
     const title = params.id
     const querySnapshot = await getDocs(collection(db, 'illustration'))

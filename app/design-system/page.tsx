@@ -3,9 +3,7 @@
 import { Button, IconButton } from "@/components"
 import { FerrisWheel } from 'lucide-react'
 const StyleSheet = () => {
-    const handleScroll = () => {
-
-    }
+    const handleScroll = () => {}
     return ( 
         <>
         <div className="text-lg">Style Sheet</div>
