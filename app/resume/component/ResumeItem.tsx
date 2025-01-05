@@ -4,7 +4,6 @@ interface ChildItem {
 }
 
 interface ResumeItem {
-id: string;
 comp: string;
 icon: string;
 date: string;
@@ -18,8 +17,8 @@ interface ResumenItemProps {
 const ResumenItem: React.FC<ResumenItemProps> = ({resumeItems}) => {
     return ( 
         <div className="grid grid-cols-1 gap-x-6 gap-y-8 md:grid-cols-2 lg:grid-cols-2">
-            {resumeItems.map(({id, comp, icon, date, title, list})=>(
-                <div className="flex flex-col gap-2 w-full" key={id}>
+            {resumeItems.map(({comp, icon, date, title, list})=>(
+                <div className="flex flex-col gap-2 w-full" key={comp}>
                     <div className="w-20">
                     <Image 
                     priority={true}
