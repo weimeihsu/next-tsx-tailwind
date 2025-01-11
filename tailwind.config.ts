@@ -8,7 +8,7 @@ const config: Config = {
   ],
   theme: {
     colors:{
-      'java': {
+    'java': {
         '50': '#f2fbfa',
         '100': '#d3f4f1',
         '200': '#a7e8e2',
@@ -33,8 +33,8 @@ const config: Config = {
       '800': '#254467',
       '900': '#233b57',
       '950': '#182639',
-  },
-      'neutral': {
+    },
+    'neutral': {
         '50': '#f5f7f9',
         '100': '#e9ecf0',
         '200': '#d8dee5',
@@ -59,7 +59,8 @@ const config: Config = {
       '800': '#884b0b',
       '900': '#733d10',
       '950': '#431f05',
-  },},
+    },
+  },
     extend: {
       colors:{
         // primary:colors.indigo,

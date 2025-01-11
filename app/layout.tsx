@@ -3,7 +3,6 @@ import { Roboto } from "next/font/google";
 
 import "./globals.css";
 import Header from "./navBar/Header";
-import SideBar from "./profolio/component/sideBar/SideBar";
 
 const roboto = Roboto({ 
   weight:'400',
